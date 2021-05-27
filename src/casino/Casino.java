@@ -66,20 +66,4 @@ public class Casino {
             }
         });
     }
-	
-	/*
-	public static void main(String[] args) {
-		int valor;
-		double payout;
-		double resultado;
-		
-		payout = Double.parseDouble(JOptionPane.showInputDialog("Payout (%):"));
-		valor = Integer.parseInt(JOptionPane.showInputDialog("Valor apostado:"));
-		
-		resultado = valor + ((payout/100) * valor);
-		
-		JOptionPane.showMessageDialog(null, resultado);
-	}
-	*/
-
 }
