@@ -23,7 +23,7 @@ public class CalcTela extends javax.swing.JFrame {
         casinoWinCalcButton = new javax.swing.JButton();
         casinoLoseCalcButton = new javax.swing.JButton();
         cleanCalcButton = new javax.swing.JButton();
-        cancelCalcButton = new javax.swing.JButton();
+        backCalcButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,8 +84,8 @@ public class CalcTela extends javax.swing.JFrame {
             }
         });
 
-        cancelCalcButton.setText("Cancel");
-        cancelCalcButton.addActionListener(new java.awt.event.ActionListener() {
+        backCalcButton.setText("Back");
+        backCalcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	cancelCalcButtonActionPerformed(evt);
             }
@@ -110,7 +110,7 @@ public class CalcTela extends javax.swing.JFrame {
                                     .addComponent(cleanCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                                 .addGroup(calcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cancelCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(backCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(casinoLoseCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
                                 .addGap(25, 25, 25)))
                         .addContainerGap())
@@ -133,7 +133,7 @@ public class CalcTela extends javax.swing.JFrame {
                             .addComponent(casinoWinCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                         .addGroup(calcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(cancelCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(backCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cleanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
@@ -156,7 +156,7 @@ public class CalcTela extends javax.swing.JFrame {
                                     .addComponent(cleanCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                                 .addGroup(calcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cancelCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(backCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(casinoLoseCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
                                 .addGap(25, 25, 25)))
                         .addContainerGap())
@@ -183,7 +183,7 @@ public class CalcTela extends javax.swing.JFrame {
                             .addComponent(casinoWinCalcButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                         .addGroup(calcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(cancelCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(backCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cleanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
@@ -304,7 +304,7 @@ public class CalcTela extends javax.swing.JFrame {
     private javax.swing.JTextField betCalcTextField;
     private javax.swing.JTextField tcBetCalcTextField;
     private javax.swing.JPanel calcPanel;
-    private javax.swing.JButton cancelCalcButton;
+    private javax.swing.JButton backCalcButton;
     private javax.swing.JButton casinoLoseCalcButton;
     private javax.swing.JButton casinoWinCalcButton;
     private javax.swing.JButton cleanCalcButton;

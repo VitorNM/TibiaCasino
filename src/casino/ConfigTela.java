@@ -19,7 +19,7 @@ public class ConfigTela extends javax.swing.JFrame {
         tcValueTextField = new javax.swing.JTextField();
         payoutTextField = new javax.swing.JTextField();
         saveButton = new javax.swing.JButton();
-        cancelConfigButton = new javax.swing.JButton();
+        backConfigButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,8 +57,8 @@ public class ConfigTela extends javax.swing.JFrame {
             }
         });
 
-        cancelConfigButton.setText("Cancel");
-        cancelConfigButton.addActionListener(new java.awt.event.ActionListener() {
+        backConfigButton.setText("Cancel");
+        backConfigButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	cancelConfigButtonActionPerformed(evt);
             }
@@ -79,7 +79,7 @@ public class ConfigTela extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(cancelConfigButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backConfigButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89))
         );
         jPanel1Layout.setVerticalGroup(
@@ -94,7 +94,7 @@ public class ConfigTela extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelConfigButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backConfigButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -148,7 +148,7 @@ public class ConfigTela extends javax.swing.JFrame {
     private javax.swing.JTextField tcValueTextField;
     private javax.swing.JTextField balanceTextField;
     private javax.swing.JButton saveButton;
-    private javax.swing.JButton cancelConfigButton;
+    private javax.swing.JButton backConfigButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField payoutTextField;
 }
