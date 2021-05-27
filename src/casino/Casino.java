@@ -4,10 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Casino {
 
-	private static int balance = 0;
-	private static double payout = 0;
 	private static String version = "v1.0";
 	private static String windowTitle = "Tibia Casino - " + version;
+	private static int balance = 0;
+	private static double payout = 0;
+	private static int tcValue = 0;
 	
 	public Casino(int balance) {
 		Casino.balance = balance;
@@ -25,6 +26,14 @@ public class Casino {
 	public static void setBalance(int newBalance) {
 		balance = newBalance;
 	}
+
+	public static int getTcValue() {
+		return tcValue;
+	}
+	
+	public static void setTcValue(int newTcValue) {
+		tcValue = newTcValue;
+	}
 	
 	public static double getPayout() {
 		return payout;
@@ -39,7 +48,7 @@ public class Casino {
 	}
 	
 	public static void printStatus() {
-		JOptionPane.showMessageDialog(null, "Payout: " + getPayout() + "%\n\nBalance: " + getBalance() + "\n");
+		JOptionPane.showMessageDialog(null, "Payout: " + getPayout() + "%\nBalance: " + getBalance() + "\nTC Market Value: " + getTcValue() + "\n");
 	}
 	
 	public static void main(String args[]) {

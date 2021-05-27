@@ -16,6 +16,7 @@ public class ConfigTela extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         balanceTextField = new javax.swing.JTextField();
+        tcValueTextField = new javax.swing.JTextField();
         payoutTextField = new javax.swing.JTextField();
         saveButton = new javax.swing.JButton();
         cancelConfigButton = new javax.swing.JButton();
@@ -32,6 +33,14 @@ public class ConfigTela extends javax.swing.JFrame {
         	balanceTextField.setText("");
         }
         balanceTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Balance"));
+
+        String tcValueTextValue = String.valueOf(Casino.getTcValue());
+        if(Casino.getTcValue() != 0){
+        	tcValueTextField.setText(tcValueTextValue);
+        } else {
+        	tcValueTextField.setText("");
+        }
+        tcValueTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("TC Market Value"));
 
         String payoutTextValue = String.valueOf(Casino.getPayout());
         if(Casino.getPayout() != 0){
@@ -63,7 +72,8 @@ public class ConfigTela extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(payoutTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                    .addComponent(balanceTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE))
+                    .addComponent(balanceTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                    .addComponent(tcValueTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -79,7 +89,9 @@ public class ConfigTela extends javax.swing.JFrame {
                 .addComponent(payoutTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(balanceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
+                .addComponent(tcValueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelConfigButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -112,13 +124,18 @@ public class ConfigTela extends javax.swing.JFrame {
     	try {
     		Casino.setBalance(Integer.parseInt(balanceTextField.getText()));
     		Casino.setPayout(Double.parseDouble(payoutTextField.getText()));
+    		if(tcValueTextField.getText().equals("")){
+    			Casino.setTcValue(0);
+    		} else {
+    			Casino.setTcValue(Integer.parseInt(tcValueTextField.getText()));
+    		}
     		Casino.printStatus();
     		DashboardTela dashboardTela = new DashboardTela();
     		dashboardTela.setVisible(true);
     		this.dispose();
     	} catch(NumberFormatException nfe) {
     		nfe.printStackTrace();
-    		JOptionPane.showMessageDialog(null, "Please enter a valid Balance and Payout values!");
+    		JOptionPane.showMessageDialog(null, "Please enter a valid Balance, Payout and TC Market values!");
     	}
     }
     
@@ -128,6 +145,7 @@ public class ConfigTela extends javax.swing.JFrame {
         this.dispose();
     }
 
+    private javax.swing.JTextField tcValueTextField;
     private javax.swing.JTextField balanceTextField;
     private javax.swing.JButton saveButton;
     private javax.swing.JButton cancelConfigButton;
