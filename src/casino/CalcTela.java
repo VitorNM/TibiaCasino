@@ -290,6 +290,7 @@ public class CalcTela extends javax.swing.JFrame {
 
     private void cleanCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {
     	betCalcTextField.setText("");
+    	tcBetCalcTextField.setText("");
     	payCalcTextField.setText("");
     }
 
