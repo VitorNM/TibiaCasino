@@ -57,7 +57,7 @@ public class ConfigTela extends javax.swing.JFrame {
             }
         });
 
-        backConfigButton.setText("Cancel");
+        backConfigButton.setText("Back");
         backConfigButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	cancelConfigButtonActionPerformed(evt);
